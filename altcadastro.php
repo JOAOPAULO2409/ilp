@@ -10,29 +10,36 @@
     <link rel="stylesheet" href=".//bootstrap-4.6.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/css.css">
 
-    <title>login</title>
+    <title>alterarcadastro</title>
   </head>
   <body>
     <div class="card" id="telalogin">
         <!--<img src="..." class="card-img-top" alt="...">-->
         <div class="card-body">
-            <form action="indexx.php" method="$_POST">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Login</label>
-                  <input type="email" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu email">
-                  <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu e-mail com mais ninguém.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Senha</label>
-                  <input  name= "senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite senha">
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">salvar dados de acesso</label>
-                </div>
-                <a href="logado.html"><button type="button" class="btn btn-success btn-lg btn-block">Entrar</button></a>
-                <button type="button" class="btn btn-danger btn-lg btn-block">Esqueceu a senha</button>
-                <a href="cadastro.php"><button onclick="cadastro" type="button" class="btn btn-primary btn-lg btn-block">Fazer cadastro</button></a>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nome Completo</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu nome completo">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Telefone</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu Telefone">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Data de Nascimento</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite data de nascimento">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword5">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword5" placeholder="Digite senha">
+              </div>
+                <button type="button" class="btn btn-success btn-lg btn-block">alterar cadastro</button>
+                <a href="logado.html"><button type="button" class="btn btn-danger btn-lg btn-block">cancelar</button></a>
+                
               </form>
         </div>
       </div>
