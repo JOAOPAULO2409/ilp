@@ -2,7 +2,7 @@
     include("verifica.php")
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +22,8 @@
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
+                <li><a href="sair.php">Sair</a></li>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/">Sobre</a></li>
                 <li><a href="/">Projetos</a></li>
                 <li><a href="/">Contatos</a></li>
                 <li><a href="altcadastro.php">Alterar Cadastro</a></li>
