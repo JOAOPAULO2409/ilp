@@ -30,6 +30,7 @@
                   <input type="checkbox" name = "salvar">
                   salvar dados de acesso
                 </label>
+                
                 <a href="indexx.php"><button type="button" class="btn btn-success btn-lg btn-block">Entrar</button></a>
                 <button type="button" class="btn btn-danger btn-lg btn-block">Esqueceu a senha</button>
                 <a href="cadastro.php"><button onclick="cadastro" type="button" class="btn btn-primary btn-lg btn-block">Fazer cadastro</button></a>
