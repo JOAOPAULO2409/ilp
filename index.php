@@ -1,3 +1,11 @@
+<?php 
+  if (isset($_COOKIE["login"])){
+    $login = $_COOKIE["login"];
+    $check = "checked";
+  }
+  if (isset($_COOKIE["senha"]))
+    $senha = $_COOKIE["senha"];
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -19,14 +27,17 @@
             <form action="indexx.php" method="$_POST">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Login</label>
-                  <input type="text" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu email">
+                  <input type="text" name="login" class="form-control" id="login" aria-describedby="emailHelp" value="<?= $login?>">
                   <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu e-mail com mais ninguém.</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Senha</label>
-                  <input  name= "senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite senha">
+                  <input  name= "senha" type="password" class="form-control" id="senha" value="<?= $senha?>">
                 </div>
-                
+                <label>
+                  <input type="checkbox" name = "salvar"<?= $salvar?>>
+                  salvar dados de acesso
+                </label>
                 <a href="logado.php"><button type="button" class="btn btn-success btn-lg btn-block">Entrar</button></a>
                 <button type="button" class="btn btn-danger btn-lg btn-block">Esqueceu a senha</button>
                 <a href="cadastro.php"><button onclick="cadastro" type="button" class="btn btn-primary btn-lg btn-block">Fazer cadastro</button></a>
