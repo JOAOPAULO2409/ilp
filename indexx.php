@@ -6,7 +6,7 @@ $senha = $_POST["senha"];
 if($login == "admin" && $senha == "123"){
     if(!isset($_SESSION))
         session_start();
-    $_SESSION["logado"] =true;
+    $_SESSION["logado"] = true;
     header("Location: logado.php");
 }
 else

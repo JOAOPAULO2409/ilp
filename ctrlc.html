@@ -22,11 +22,39 @@
           </form>
     </div>-->
 
-    <?php 
+<?php 
   if (isset($_COOKIE["login"])){
     $login = $_COOKIE["login"];
     $check = "checked";
   }
   if (isset($_COOKIE["senha"]))
     $senha = $_COOKIE["senha"];
+?>
+
+
+<a href="indexx.php"><button type="submit" class="btn btn-success btn-lg btn-block">Entrar</button></a>
+
+<?php 
+
+$login = $_POST["login"];
+$senha = $_POST["senha"];
+if (isset($_POST["salvar"])){
+  setcookie("login",$login);
+  setcookie("senha",$senha);
+}
+else{
+  setcookie("login",$login,time()-1);
+  setcookie("senha",$senha,time()-1);
+}
+
+?>
+
+<?php
+    $login = $senha = $check ="";
+    if(isset($_COOKIE["login"])){
+      $login = $_COOKIE["login"];
+      $check = "checked";
+    }
+    if(isset($_COOKIE["senha"]))
+      $senha = $_COOKIE["senha"];
 ?>
