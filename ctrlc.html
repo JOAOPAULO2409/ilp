@@ -21,3 +21,12 @@
             <a href="cadastro.php"><button onclick="cadastro" type="button" class="btn btn-primary btn-lg btn-block">Fazer cadastro</button></a>
           </form>
     </div>-->
+
+    <?php 
+  if (isset($_COOKIE["login"])){
+    $login = $_COOKIE["login"];
+    $check = "checked";
+  }
+  if (isset($_COOKIE["senha"]))
+    $senha = $_COOKIE["senha"];
+?>
