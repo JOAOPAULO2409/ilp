@@ -16,7 +16,7 @@
     <div class="card" id="telalogin">
         <!--<img src="..." class="card-img-top" alt="...">-->
         <div class="card-body">
-            <form>
+            <form action="#" method="post">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu email">
