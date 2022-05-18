@@ -1,3 +1,47 @@
+<?php
+include("conecta.php");
+
+if(!isset($_SESSION)) session_start();
+
+if(isset($_SESSION["id_usuario"])){
+
+	$aux = "disabled";
+
+	$id = $_SESSION["id_usuario"];
+
+	try {
+	
+		$sql = "SELECT * FROM `usuarios`WHERE `id` = '$id'";
+		
+		$res = $conn->query($sql)->fetchAll();
+
+		if(count($res) > 0) {
+	        foreach ($res as $row) {
+	            $nome = $row['nome'];
+	            $email = $row['email'];
+	            $login = $row['login'];
+	            $senha = $row['senha'];
+	        }
+	       
+    	}	
+	} catch(PDOException $e) {
+		echo $sql . "<br>" . $e->getMessage();
+	}
+	$conn = null;
+
+	echo ("<p><a href='excluir.php?id=$id'>Excluir a conta</a>");
+}
+else{
+	$nome = "";
+	$email = "";
+	$login = "";
+	$senha = "";
+	$aux = "";
+}
+?>
+
+
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -16,33 +60,30 @@
     <div class="card" id="telalogin">
         <!--<img src="..." class="card-img-top" alt="...">-->
         <div class="card-body">
-            <form action="#" method="post">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu email">
-                </div>
-                <div class="form-group">
+            <form action="process_cadastrar.php" method="post">
+            <div class="form-group">
                   <label for="exampleInputEmail1">Nome Completo</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu nome completo">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Telefone</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe seu Telefone">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Data de Nascimento</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite data de nascimento">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword5">Senha</label>
-                  <input type="password" class="form-control" id="exampleInputPassword5" placeholder="Digite senha">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword6">Confirme senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword6" placeholder="Confirme senha">
-                </div>
-                <a href="index.php"><button type="button" class="btn btn-success btn-lg btn-block">cadastrar</button></a>
-                <a href="index.php"><button type="button" class="btn btn-danger btn-lg btn-block">cancelar</button></a>
+                  <input type="text" name="nome" class="form-control" id="nome" aria-describedby="emailHelp" value="<?= $nome ?>">
+            </div>
+            <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" value="<?= $email ?>">
+            </div>
+            <div class="form-group">
+                  <label for="exampleInputEmail1">Login</label>
+                  <input type="text" name="login" class="form-control" id="login" aria-describedby="emailHelp" value="<?= $login ?>">
+            </div>    
+            <div class="form-group">
+                  <label for="exampleInputEmail1">Senha</label>
+                  <input type="password" name="senha" class="form-control" id="senha" aria-describedby="emailHelp" value="<?= $senha ?>">
+            </div>
+            <div class="form-group">
+                  <label for="exampleInputEmail1">Confirme a senha</label>
+                  <input type="password" name="senha2" class="form-control" id="senha2" aria-describedby="emailHelp" value="<?= $senha ?>">
+            </div>            
+            <input type = "submit" class="btn btn-success btn-lg btn-block" value="Cadastrar">
+            <br>
+            <a href="index.php"><button type="button" class="btn btn-danger btn-lg btn-block">cancelar</button></a>
                 
               </form>
         </div>

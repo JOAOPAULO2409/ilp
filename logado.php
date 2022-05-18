@@ -26,7 +26,7 @@
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/">Projetos</a></li>
                 <li><a href="/">Contatos</a></li>
-                <li><a href="altcadastro.php">Alterar Cadastro</a></li>
+                <li><a href="cadastro.php">Alterar Cadastro</a></li>
             </ul>
         </nav>
     </header>
