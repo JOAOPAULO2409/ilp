@@ -3,13 +3,16 @@ include("conecta.php");
 
 $nome = $_POST["nome"];
 $email = $_POST["email"];
+$login = $_POST["login"];
 $senha = $_POST["senha"];
+
+
 
 if(!isset($_SESSION)) {
 	session_start();
 	
-	if(isset($_SESSION["id_usuario"])){
-		$id = $_SESSION["id_usuario"];
+	if(isset($_SESSION["id_usuarios"])){
+		$id = $_SESSION["id_usuarios"];
 		$location = "Location:logado.php";
 		$sql = "UPDATE `usuarios` SET `nome`='$nome', `email`='$email', `senha`='$senha' WHERE `id`=$id";
 	}
