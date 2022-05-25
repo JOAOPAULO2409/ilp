@@ -41,7 +41,7 @@
                 </label>
 
                 <input type = "submit" class="btn btn-success btn-lg btn-block" value="Logar">
-                <button type="button" class="btn btn-danger btn-lg btn-block">Esqueceu a senha</button>
+                <br>                
                 <a href="cadastro.php"><button onclick="cadastro" type="button" class="btn btn-primary btn-lg btn-block">Fazer cadastro</button></a>
               </form>
         </div>

@@ -29,7 +29,7 @@ if(isset($_SESSION["id_usuario"])){
 	}
 	$conn = null;
 
-	echo ("<p><a href='excluir.php?id=$id'>Excluir a conta</a>");
+	echo ("<p><a href='excluir.php?id=$id'>Excluir conta</a>");
 }
 else{
 	$nome = "";
@@ -81,10 +81,10 @@ else{
                   <label for="exampleInputEmail1">Confirme a senha</label>
                   <input type="password" name="senha2" class="form-control" id="senha2" aria-describedby="emailHelp" value="<?= $senha ?>">
             </div>            
-            <input type = "submit" class="btn btn-success btn-lg btn-block" value="Cadastrar">
+            <a href="logado.php"><input type = "submit" class="btn btn-success btn-lg btn-block" value="Cadastrar"></a>
             <br>
-            <a href="index.php"><button type="button" class="btn btn-danger btn-lg btn-block">cancelar</button></a>
-                
+            <a href="logado.php"><button type="button" class="btn btn-danger btn-lg btn-block">cancelar</button></a>
+            
               </form>
         </div>
       </div>
