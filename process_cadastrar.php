@@ -15,21 +15,22 @@ if(!isset($_SESSION)) {
 		$id = $_SESSION["id_usuarios"];
 		$location = "Location:logado.php";
 		$sql = "UPDATE `usuarios` SET `nome`='$nome', `email`='$email', `senha`='$senha' WHERE `id`=$id";
+		header($location);
 	}
 	else{
 		$login = $_POST["login"];
 		$location = "Location:index.php";
 		$sql = "INSERT INTO usuarios (`id`, `nome`, `email`, `login`, `senha`) VALUES (NULL, '$nome', '$email', '$login', '$senha')";
+		header($location);
 	}
 }
 
 try {	
 	$conn->exec($sql);		
 } catch(PDOException $e) {
-	echo $sql . "<br>" . $e->getMessage();
+	/*echo $sql . "<br>" . $e->getMessage();*/
+	header("Location:cadastroerro.php");
 }
+
 $conn = null;
-
-header($location);
-
 ?>

@@ -85,7 +85,7 @@ else{
             <br>
             <a href="logado.php"><button type="button" class="btn btn-danger btn-lg btn-block">cancelar</button></a>
             
-              </form>
+            </form>
         </div>
       </div>
 
