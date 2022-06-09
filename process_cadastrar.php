@@ -15,7 +15,7 @@ if(!isset($_SESSION)) {
 		$id = $_SESSION["id_usuario"];
 		$location = "Location:logado.php";
 		$sql = "UPDATE `usuarios` SET `nome`='$nome', `email`='$email', `senha`='$senha' WHERE `id`=$id";
-		
+		header($location);
 	}
 	else{
 		$login = $_POST["login"];
@@ -26,12 +26,13 @@ if(!isset($_SESSION)) {
 }
 
 try {	
-		$conn->exec($sql);		
+	$conn->exec($sql);	
+
 } catch(PDOException $e) {
-	/*echo $sql . "<br>" . $e->getMessage();*/
-		header("Location:cadastroerro.php");
+	header("Location:cadastroerro.php");
+		
 }
 
 $conn = null;
-header($location);
+
 ?>
