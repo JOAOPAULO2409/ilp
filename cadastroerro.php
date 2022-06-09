@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +9,19 @@
     <link rel="stylesheet" href="css/css.css">
 </head>
 <body>
-<main></main>
-    <script src="mobile-navbar.js"></script>
-    <div class="card" id="telalogin">
-        <!--<img src="..." class="card-img-top" alt="...">-->
-        <div class="card-body">
-            <form>
-                <div class="form-group">
-                    <small id="emailHelp" class="form-text text-muted">Esse login já existe. Tente outro por favor.</small>                    
-                </div>                
-                <a href="cadastro.php"><button type="button" class="btn btn-success btn-lg btn-block">Tentar Outro</button></a>
-              </form>
+    <main>
+        <script src="mobile-navbar.js"></script>
+        <div class="card" id="telalogin">
+            <!--<img src="..." class="card-img-top" alt="...">-->
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <small id="emailHelp" class="form-text text-muted">Esse login já existe. Tente outro por favor.</small>                    
+                    </div>                
+                    <a href="cadastro.php"><button type="button" class="btn btn-success btn-lg btn-block">Tentar Outro</button></a>
+                </form>
+            </div>
         </div>
-      </div>
+    </main>
 </body>
 </html>
