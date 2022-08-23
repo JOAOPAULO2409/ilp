@@ -1,0 +1,11 @@
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.csproj.AssemblyReference.cache
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.csproj.SuggestedBindingRedirects.cache
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.Form1.resources
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\jopinha\Desktop\c# projetos proprios\Calculadora\obj\Debug\Calculadora.pdb
